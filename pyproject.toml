@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tide-velocity"
+version = "0.1.0"
+description = "TIDE: pluggable velocity-graph construction and high-cosine gene module analysis"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "TIDE Team" }]
+license = "MIT"
+dependencies = [
+  "numpy>=1.22",
+  "pandas>=1.5",
+  "scipy>=1.8",
+  "anndata>=0.8",
+  "scanpy>=1.9",
+  "scvelo>=0.2.5,<0.3",
+]
+
+[project.optional-dependencies]
+docs = [
+  "sphinx>=7.0",
+  "furo>=2024.8.6",
+  "myst-parser>=3.0",
+]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.5",
+]
+
+[tool.ruff]
+line-length = 119
+
+[tool.setuptools]
+license-files = ["LICENSE", "NOTICE"]
